@@ -12,15 +12,15 @@ export default function AllTasks({tasks,setTasks}){
 
     function Task({desc,id}){
         return (
-            <>
-            <div style={{width:"60vw",backgroundColor:"rgb(47, 125, 199)",color:"white",padding:"10px",margin:"auto"}}>
+            <div>
+            <div style={{width:"30vw",backgroundColor:"rgb(47, 125, 199)",color:"white",padding:"10px",margin:"auto",marginBottom:"20px"}}>
             <span>{desc}</span>
             <button style={{float:"right"}} onClick={()=>{
                 console.log(id)
                 delete_task(id)
             }}>x</button>
         </div>
-            </>
+            </div>
         )
     }
 
@@ -29,8 +29,12 @@ export default function AllTasks({tasks,setTasks}){
 
     })
     return (
-        <div style={{width:"100vw"}}>
+        <div style={{fontSize:"1.5rem",textAlign:"center"}}>
+            <div style={{padding:"20px"}}> Tasks</div>
+        <div style={{fontSize:"1.3rem"}}>
         {all_tasks}
         </div>
+        </div>
+
     )
 }
