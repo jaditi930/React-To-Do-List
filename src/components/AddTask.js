@@ -21,6 +21,8 @@ export default function AddTasks({tasks,setTasks}){
           id:uuidv4(),
           desc:desc
         }
+        let localst=JSON.stringify([...tasks,newtask])
+        localStorage.setItem("tasks",localst)
         setTasks([...tasks,newtask]);
         console.log(newtask)
       }}/>
